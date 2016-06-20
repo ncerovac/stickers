@@ -13,322 +13,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
     <link href='https://fonts.googleapis.com/css?family=Merienda+One|Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
-    <style>
-      html,
-      body {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 17px;
-        overflow-x: hidden;
-      }
-      #hero {
-        padding: 1rem 0 0 0;
-
-        background: rgba(237,237,237,1);
-        background: -moz-linear-gradient(-45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(53%, rgba(246,246,246,1)), color-stop(100%, rgba(255,255,255,1)));
-        background: -webkit-linear-gradient(-45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        background: -o-linear-gradient(-45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        background: -ms-linear-gradient(-45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        background: linear-gradient(135deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=1 );
-      }
-      #copy {
-      }
-      #navbar {
-        margin: 1rem auto;
-        text-align: center;
-      }
-      #navbar > #type {
-        font-family: 'Merienda One', cursive;
-        font-size: 30px;
-        letter-spacing: -0.1rem;
-      }
-      #hero {
-        text-align: center;
-        margin-bottom: 1rem;
-      }
-      #hero > div {
-        display: inline-block;
-        vertical-align: top;
-        text-align: initial;
-      }
-      #phone {
-        width: 240px;
-        height: 480px;
-        margin: 1rem;
-        position: relative;
-      }
-      #phone > img {
-        width: 400px;
-        height: 600px;
-        margin: -60px -80px;
-
-        transition: opacity 600ms ease-in-out;
-
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      #how {
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-      }
-      #how > div {
-        position: relative;
-        text-align: center;
-        display: inline-block;
-        vertical-align: top;
-        height: 22rem;
-        width: 33.3332%;
-        box-sizing: border-box;
-        color: #eee;
-
-        background: rgba(33,33,33,1);
-        background: -moz-linear-gradient(45deg, rgba(33,33,33,1) 0%, rgba(18,18,18,1) 100%);
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(33,33,33,1)), color-stop(100%, rgba(18,18,18,1)));
-        background: -webkit-linear-gradient(45deg, rgba(33,33,33,1) 0%, rgba(18,18,18,1) 100%);
-        background: -o-linear-gradient(45deg, rgba(33,33,33,1) 0%, rgba(18,18,18,1) 100%);
-        background: -ms-linear-gradient(45deg, rgba(33,33,33,1) 0%, rgba(18,18,18,1) 100%);
-        background: linear-gradient(45deg, rgba(33,33,33,1) 0%, rgba(18,18,18,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#121212', GradientType=1 );
-      }
-      #how > div > div {
-        position: absolute;
-        top: 50%;
-        left: 1rem;
-        right: 1rem;
-        transform: translateY(-50%);
-      }
-      #how h3 {
-        text-align: center;
-      }
-      #how h3 > span {
-        display: inline-block;
-        font-size: 36px;
-        font-family: 'Merienda One', cursive;
-        background: #eee;
-        color: #212121;
-        border-radius: 50%;
-        width: 3.25rem;
-        height: 3.25rem;
-        text-align: center;
-      }
-      #how p {
-        font-size: 15px;
-        color: #aaa;
-      }
-      #why {
-      }
-      #why > div {
-        display: inline-block;
-        vertical-align: top;
-
-        height: 300px;
-        width: 50%;
-        box-sizing: border-box;
-
-        background: rgba(237,237,237,1);
-        background: -moz-linear-gradient(45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        background: -webkit-gradient(right top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(53%, rgba(246,246,246,1)), color-stop(100%, rgba(255,255,255,1)));
-        background: -webkit-linear-gradient(45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        background: -o-linear-gradient(45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        background: -ms-linear-gradient(45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        background: linear-gradient(45deg, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=1 );
-      }
-      #bottom {
-        background: white;
-      }
-      #form {
-        padding: 1rem;
-      }
-      #form > .pricing {
-        text-align: center;
-        margin-bottom: 1rem;
-      }
-      #form > .pricing > label {
-        display: inline-block;
-        vertical-align: top;
-        width: 12rem;
-        text-align: initial;
-        
-        margin: 1rem 0.5rem;
-      }
-      #form > .pricing > label > input {
-        opacity: 0;
-        position: absolute;
-      }
-      #form > .pricing > label > input + .package {
-        border: 0.125rem solid #ddd;
-      }
-      #form.active > .pricing > label > input + .package:hover {
-      }
-      #form > .pricing > label > input + .package:hover {
-        border: 0.125rem solid #83b0d4;
-      }
-      #form.active > .pricing > label > input:checked + .package {
-        border: 0.125rem solid #2982cc;
-      }
-      #order {
-        margin: 2rem 0;
-      }
-      input[type="text"],
-      input[type="email"] {
-        box-shadow: none;
-        border: 0.125rem solid #ddd;
-        font-size: 21px;
-        padding: 0.875rem 1.875rem;
-        border-radius: 0.25rem;
-        box-sizing: border-box;
-      }
-      input[type="text"]:focus,
-      input[type="email"]:focus {
-        border: 0.125rem solid #83b0d4;
-        outline: none;
-      }
-      .package {
-        cursor: pointer;
-        border-radius: 0.25rem;
-        box-sizing: border-box;
-        padding: 1rem;
-        text-align: center;
-
-        transition: all 300ms ease-in-out;
-      }
-      .package::after {
-        content: 'Click to select';
-        display: block;
-        font-style: italic;
-        color: #bbb;
-        font-size: 15px;
-        margin-bottom: 0.25rem;
-      }
-      .package > .name {
-        font-weight: bold;
-        font-size: 21px;
-        margin-bottom: 0.5rem;
-      }
-      .amount {
-        display: inline-block;
-        font-size: 42px;
-      }
-      .amount > span {
-        font-size: 50%;
-        font-weight: bold;
-        vertical-align: 40%;
-      }
-      .unit {
-        display: inline-block;
-        vertical-align: baseline;
-      }
-      .entry {
-        margin: auto;
-        width: 38rem;
-        margin-bottom: 2rem;
-      }
-      .entry > h2 {
-        padding: 0 1rem;
-      }
-      .entry > label {
-        display: block;
-        font-size: 19px;
-        margin: 0.5rem 0.125rem;
-      }
-      .entry > input {
-        width: 38rem;
-      }
-      .entry > button[type="submit"] {
-        margin-top: 1rem;
-      }
-      button {
-        color: white;
-        font-size: 21px;
-        border-radius: 0.25rem;
-        box-sizing: border-box;
-        border: none;
-        outline: none;
-        padding: 1rem 2rem;
-
-        background: rgba(41,131,204,1);
-        background: -moz-linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(41,131,204,1)), color-stop(100%, rgba(131,176,212,1)));
-        background: -webkit-linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        background: -o-linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        background: -ms-linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        background: linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2983cc', endColorstr='#83b0d4', GradientType=1 );
-
-        transition: all 300ms ease-in-out;
-      }
-      button:focus,
-      button:hover {
-        background: rgba(45,141,214,1);
-        background: -moz-linear-gradient(45deg, rgba(45,141,214,1) 0%, rgba(138,185,222,1) 100%);
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(45,141,214,1)), color-stop(100%, rgba(138,185,222,1)));
-        background: -webkit-linear-gradient(45deg, rgba(45,141,214,1) 0%, rgba(138,185,222,1) 100%);
-        background: -o-linear-gradient(45deg, rgba(45,141,214,1) 0%, rgba(138,185,222,1) 100%);
-        background: -ms-linear-gradient(45deg, rgba(45,141,214,1) 0%, rgba(138,185,222,1) 100%);
-        background: linear-gradient(45deg, rgba(45,141,214,1) 0%, rgba(138,185,222,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d8dd6', endColorstr='#8ab9de', GradientType=1 );
-      }
-      button:active {
-        background: rgba(41,131,204,1);
-        background: -moz-linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(41,131,204,1)), color-stop(100%, rgba(131,176,212,1)));
-        background: -webkit-linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        background: -o-linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        background: -ms-linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        background: linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2983cc', endColorstr='#83b0d4', GradientType=1 );
-      }
-      #footer {
-        font-size: 15px;
-        color: #bbb;
-        text-align: center;
-        margin-bottom: 5rem;
-      }
-      @media (max-width: 40rem) {
-        .entry {
-          width: 100%;
-        }
-        .entry > input {
-          width: 100%;
-        }
-        #form > .pricing > label {
-          width: 100%;
-          margin-left: 0;
-          margin-right: 0;
-        }
-        .package::after {
-          content: 'Tap to select';
-        }
-        .entry > button[type="submit"] {
-          display: block;
-          width: 100%;
-          margin-top: 3rem;
-        }
-        #how > div {
-          width: 100%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <section id="hero">
-      <section id="navbar">
-        <div id="logo" style="font-size: 64px;">🙋</div>
-        <div id="type">Stickers</div>
-      </section>
+      <div class="right">
+        <section id="navbar">
+          <div id="logo" style="font-size: 64px;">🙋</div>
+          <div id="type">Stickers</div>
+        </section>
 
-      <div id="phone">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAoZJREFUeNrEVDtMFFEUPW8+O7uz82F3XTYGBGLcxMRCExOkMxYWEiMVFNhIJa2JjZ2tCaUxYi2V2hgjNsbK0sJYQgwoKp/9MrI7//HOAzdsyMOCwkle5s2bd88959z7HkuSBCd5JJzwUQ5/PF1crK6urN6XZdkEo4UDcoztT8MgdKrVcwvz8/MrvaBUwt9xZ25u6SBMOGZnby8djuljUBkcLExO3oBhGFDVDOI45psymf15vV5DuVy2hRKGhkdw994DnKnYiDwPjWYTEpNQKpWgKDKePXmMtY2fkRAgiiKEv5uowUMYhnwtZgm2trdgmBYuXrmK+u6yKgSQZUkOAh/Nlk8SVMiShAy9TcuCpmnIc2lERVTGtCX8iOHdh4/Y2Kwjo5MUSUN7z8dmbZd8SOD7gStkQIbFEZk1OjqKwgAFRzEPShBzNr26ihnE/k6jjeev32Pt+w/EUQhJYhScsmb/7kRKj8qpIqZvXkc+byIgI7tdl6rR4OVkjB3fiTFtIiNxbeJyrwqfPn8hBpSJJOyvJWIGEmUwclnkNAVmPsvHpQvnUSoWUbRNxHvtI0L6GOh6jjdPNpuBR42kE5iha6iUbGLBkLNt3qVCAEVR8Gu7Bi2n4+vaOmUuwKKAtuPApl5otRwuRSghLeHw6TIGrDzKpQIarV0yMkDX9XmXup5/xMg+BunPIIjQ6XqwLJtMoyDXRa1eh5HXe4dLCKCShI4fQPUCmHoWI8NDnHIiqfCCgEuku0IMsL7+TX7x8hV0ytbpdLnjEtXQJcDUxPScTIyPy0KAnZ1tZ/ntm2OvsLNjY44QYGZm+iGdug7pNIi6RO8o1UxT+eAGcqambj3q8+2/38p/BBgAA5YpwTvjeG8AAAAASUVORK5CYII=" alt="Stickers in a Telegram thread" />
+        <div id="copy" style="max-width: 400px; min-width: 200px; margin: 1rem;">
+          <h1>Get a sticker of yourself.</h1>
+          <p class="lead">We eternalize you, or someone yours, into a chat stickers. Surprise someone, and react in a completely unique fashon. Be ahead of the others.</p>
+          <button id="start">Order Now.</button>
+        </div>
       </div>
+      <div class="left">
+        <div id="phone">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAoZJREFUeNrEVDtMFFEUPW8+O7uz82F3XTYGBGLcxMRCExOkMxYWEiMVFNhIJa2JjZ2tCaUxYi2V2hgjNsbK0sJYQgwoKp/9MrI7//HOAzdsyMOCwkle5s2bd88959z7HkuSBCd5JJzwUQ5/PF1crK6urN6XZdkEo4UDcoztT8MgdKrVcwvz8/MrvaBUwt9xZ25u6SBMOGZnby8djuljUBkcLExO3oBhGFDVDOI45psymf15vV5DuVy2hRKGhkdw994DnKnYiDwPjWYTEpNQKpWgKDKePXmMtY2fkRAgiiKEv5uowUMYhnwtZgm2trdgmBYuXrmK+u6yKgSQZUkOAh/Nlk8SVMiShAy9TcuCpmnIc2lERVTGtCX8iOHdh4/Y2Kwjo5MUSUN7z8dmbZd8SOD7gStkQIbFEZk1OjqKwgAFRzEPShBzNr26ihnE/k6jjeev32Pt+w/EUQhJYhScsmb/7kRKj8qpIqZvXkc+byIgI7tdl6rR4OVkjB3fiTFtIiNxbeJyrwqfPn8hBpSJJOyvJWIGEmUwclnkNAVmPsvHpQvnUSoWUbRNxHvtI0L6GOh6jjdPNpuBR42kE5iha6iUbGLBkLNt3qVCAEVR8Gu7Bi2n4+vaOmUuwKKAtuPApl5otRwuRSghLeHw6TIGrDzKpQIarV0yMkDX9XmXup5/xMg+BunPIIjQ6XqwLJtMoyDXRa1eh5HXe4dLCKCShI4fQPUCmHoWI8NDnHIiqfCCgEuku0IMsL7+TX7x8hV0ytbpdLnjEtXQJcDUxPScTIyPy0KAnZ1tZ/ntm2OvsLNjY44QYGZm+iGdug7pNIi6RO8o1UxT+eAGcqambj3q8+2/38p/BBgAA5YpwTvjeG8AAAAASUVORK5CYII=" alt="Stickers in a Telegram thread" />
+        </div>
+      </div>
+    </section>
 
-      <div id="copy" style="max-width: 400px; min-width: 200px; margin: 1rem;">
-        <h1>Get a sticker of yourself.</h1>
-        <p class="lead">We eternalize you, or someone yours, into a chat stickers. Surprise someone, and react in a completely unique fashon. Be ahead of the others.</p>
-      </div>
+    <section id="how-heading">
+      <h2>As Easy As</h2>
     </section>
 
     <section id="how">
@@ -365,12 +74,12 @@
     <div id="bottom">
       <section id="order">
         <div class="entry" style="margin-bottom: 0;">
-          <h2 style="margin-bottom: 0;">Our Offer</h2>
+          <h2 style="margin-bottom: 0; margin-top: 2rem;">Deals</h2>
         </div>
         <form id="form" onsubmit="return false;">
           <div class="pricing">
             <label>
-              <input type="radio" name="package" value="$30 Single Sticker" />
+              <input type="radio" name="package" value="$30 Single Sticker" required />
               <div class="package">
                 <div class="name">Single Sticker</div>
                 <div class="amount"><span>$</span>30</div>
@@ -378,20 +87,20 @@
               </div>
             </label><!--
          --><label>
-              <input type="radio" name="package" value="$25/s Team Stickers" />
-              <div class="package">
+              <input type="radio" name="package" value="$25/s Multiple Stickers" />
+              <div class="package preferred">
                 <div class="name">Multiple Stickers</div>
                 <div class="amount"><span>$</span>20</div>
-                <div class="unit">per sticker</div>
+                <div class="unit"><span>per</span> <span>sticker</span></div>
                 <p>You get multiple stickers of the same person.</p>
               </div>
             </label><!--
          --><label>
-              <input type="radio" name="package" value="$20/tm Team Stickers" />
+              <input type="radio" name="package" value="$20/s Team Stickers" />
               <div class="package">
                 <div class="name">Team Stickers</div>
                 <div class="amount"><span>$</span>25</div>
-                <div class="unit">per sticker</div>
+                <div class="unit"><span>per</span> <span>sticker</span></div>
                 <p>You get multiple stickers of different persons.</p>
               </div>
             </label>
@@ -402,55 +111,25 @@
           </div>
           <div class="entry">
             <label>Email</label>
-            <input type="email" name="email" placeholder="e.g., me@sticker.com" />
+            <input type="email" name="email" placeholder="e.g., me@sticker.com" required />
           </div>
           <div class="entry">
-            <button type="submit">Get Started →</button>
+            <button type="submit">Submit.</button>
           </div>
         </form>
+      </section>
+      <section id="order-success" style="display: none;">
+        <div class="entry" style="text-align: center;margin-top: 4rem;margin-bottom: 4rem;">
+          <h2 style="margin-bottom: 0; margin-top: 2rem;">Thank You!</h2>
+          <p>We’ll get back to you shortly.</p>
+        </div>
       </section>
 
       <section id="footer">
         <p>Cheers. Your Stickers Crew. 2016</p>
       </section>
     </div>
-    <script>
-      var hero = new Image();
 
-      hero.onload = function () {
-        var phone = document.getElementById('phone'),
-            tiny = phone.children[0];
-
-        hero.style.opacity = 0;
-
-        phone.appendChild(hero);
-
-        setTimeout(function () {
-          tiny.style.opacity = 0;
-          hero.style.opacity = 1;
-
-          setTimeout(function () {
-            tiny.remove();
-          }, 630);
-        }, 10);
-      };
-
-      hero.src = 'hero.png';
-
-      var form = document.getElementById('form'),
-          packages = form.querySelectorAll('input[name="package"]'),
-          i = 0,
-          n = packages.length;
-
-      function handlePackage() {
-        form.className = 'active';
-      }
-
-      while (i < n) {
-        packages[i].onclick = handlePackage;
-
-        i++;
-      }
-    </script>
+    <script src="logic.js"></script>
   </body>
 </html>
