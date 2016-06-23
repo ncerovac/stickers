@@ -216,14 +216,14 @@ input[type="email"]:focus {
   top: 0.3rem;
   right: -1.8rem;
 
-  background: rgba(245,147,130,1);
-background: -moz-linear-gradient(45deg, rgba(245,147,130,1) 0%, rgba(231,56,39,1) 100%);
-background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(245,147,130,1)), color-stop(100%, rgba(231,56,39,1)));
-background: -webkit-linear-gradient(45deg, rgba(245,147,130,1) 0%, rgba(231,56,39,1) 100%);
-background: -o-linear-gradient(45deg, rgba(245,147,130,1) 0%, rgba(231,56,39,1) 100%);
-background: -ms-linear-gradient(45deg, rgba(245,147,130,1) 0%, rgba(231,56,39,1) 100%);
-background: linear-gradient(45deg, rgba(245,147,130,1) 0%, rgba(231,56,39,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f59382', endColorstr='#e73827', GradientType=1 );
+background: rgba(161,245,133,1);
+background: -moz-linear-gradient(-45deg, rgba(161,245,133,1) 0%, rgba(39,230,83,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(161,245,133,1)), color-stop(100%, rgba(39,230,83,1)));
+background: -webkit-linear-gradient(-45deg, rgba(161,245,133,1) 0%, rgba(39,230,83,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(161,245,133,1) 0%, rgba(39,230,83,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(161,245,133,1) 0%, rgba(39,230,83,1) 100%);
+background: linear-gradient(135deg, rgba(161,245,133,1) 0%, rgba(39,230,83,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1f585', endColorstr='#27e653', GradientType=1 );
 }
 .package > .name {
   font-weight: bold;

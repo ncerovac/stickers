@@ -47,26 +47,23 @@ function handleEmailKeyPress(e) {
 function handleFormSubmit(e) {
   e.preventDefault();
 
-  // var xhr = new XMLHttpRequest();
-  // xhr.open('POST', 'https://zapier.com/hooks/catch/1445143/43bfhn/');
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://zapier.com/hooks/catch/1445143/43bfhn/');
 
-  // xhr.onreadystatechange = function(e) {
-  //   if (this.readyState == 4 && this.status == 200) {
-  //     // TODO
-setTimeout(function () {
+  xhr.onreadystatechange = function(e) {
+    if (this.readyState == 4 && this.status == 200) {
       document.getElementById('order').style.display = 'none';
       document.getElementById('order-success').style.display = 'block';
-}, 1000);
-  //   }
-  // };
+    }
+  };
 
-  // var content = JSON.stringify({
-  //   package: form.querySelector('input[name="package"]:checked').value,
-  //   name: nameInput.value,
-  //   email: emailInput.value
-  // });
+  var content = JSON.stringify({
+    package: form.querySelector('input[name="package"]:checked').value,
+    name: nameInput.value,
+    email: emailInput.value
+  });
 
-  // xhr.send(content);
+  xhr.send(content);
 }
 
 while (i < n) {
