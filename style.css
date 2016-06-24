@@ -326,7 +326,13 @@ button:active {
   text-align: center;
   margin-bottom: 5rem;
 }
+.vote-table {
+  padding: 0 4rem 0 4rem;
+}
 @media (max-width: 40rem) {
+  .vote-table {
+    padding: 0;
+  }
   .entry {
     width: 100%;
   }
