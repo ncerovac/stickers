@@ -19,6 +19,7 @@ hero.src = 'hero.png';
 
 // Add form handlers
 
+try {
 var form = document.getElementById('form'),
     packages = form.querySelectorAll('input[name="package"]'),
     nameInput = form.querySelector('input[name="name"]'),
@@ -86,6 +87,22 @@ emailInput.onkeydown = handleEmailKeyPress;
 form.onsubmit = handleFormSubmit;
 
 form.attributes['onSubmit'] = null;
+} catch (e) {}
+// Add subscribe form handlers
+
+var subscribeForm = document.getElementById('subscribe-form'),
+    subscribeEmailInput = subscribeForm.querySelector('input[name="email"]'),
+    subscribeButton = subscribeForm.querySelector('button[type="submit"]');
+
+function handleSubscribeFormSubmit(e) {
+  e.preventDefault();
+
+  alert('ok');
+}
+
+subscribeForm.onsubmit = handleSubscribeFormSubmit;
+
+subscribeForm.attributes['onSubmit'] = null;
 
 // Initialize start button
 

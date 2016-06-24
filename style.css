@@ -137,7 +137,8 @@ body {
 #bottom {
   background: white;
 }
-#form {
+#form,
+#subscribe-form {
   padding: 1rem;
 }
 #form > .pricing {
