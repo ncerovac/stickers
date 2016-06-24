@@ -362,6 +362,7 @@ button:active {
     transform: translateY(-50%);
   }
   #hero > .right {
+    z-index: 2;
     position: absolute;
     left: 30%;
     margin-left: -1rem;
