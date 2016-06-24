@@ -9,8 +9,8 @@ body {
   width: 110px;
 }
 
-.social .fb-share-button {
-  vertical-align: middle;
+.social iframe {
+  vertical-align: bottom;
 }
 #hero {
   padding: 1rem 0 0 0;
