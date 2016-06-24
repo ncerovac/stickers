@@ -58,7 +58,7 @@ function handleFormSubmit(e) {
       //event triger submit for GA
       ga('send', 'event', 'Button', 'submit', 'Request Sticker');
       //mixpanel track req and person
-      mixpanel.track("Request Sticker", {"Name": nameInput.value, "Email" : emailInput.value, "Package" : form.querySelector('input[name="package"]:checked').value});
+      mixpanel.track("Make Me Sticker Button", {"Name": nameInput.value, "Email" : emailInput.value, "Package" : form.querySelector('input[name="package"]:checked').value});
       mixpanel.people.set({
         "$email": emailInput.value, // only special properties need the $
         "name": nameInput.value
@@ -95,6 +95,6 @@ document.getElementById('start').onclick = function () {
   //send event triger to GA
   ga('send', 'event', 'Button', 'lead', 'Request Info');
   //send triggere to mixpannel
-  mixpanel.track("Request Info", {"Button Location": "Top"});
+  mixpanel.track("Get In Touch Button", {"Button Location": "Top"});
   document.getElementById('order').scrollIntoView();
 }
