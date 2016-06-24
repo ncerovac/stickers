@@ -4,8 +4,13 @@ body {
   font-size: 17px;
   overflow-x: hidden;
 }
-.social iframe,.social>span {
-vertical-align: middle;
+.social span {
+  display: inline-block;
+  width: 110px;
+}
+
+.social .fb-share-button {
+  vertical-align: middle;
 }
 #hero {
   padding: 1rem 0 0 0;
