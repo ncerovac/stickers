@@ -1,9 +1,9 @@
 // Load the hero image
-var hero = new Image();
+var hero = new Image(),
+    phone = document.getElementById('phone') || document.getElementById('phone-brexit'),
+    tiny = phone.children[0];
 
 hero.onload = function () {
-  var phone = document.getElementById('phone'),
-      tiny = phone.children[0];
   hero.style.opacity = 0;
   phone.appendChild(hero);
   setTimeout(function () {
@@ -15,7 +15,7 @@ hero.onload = function () {
   }, 10);
 };
 
-hero.src = 'hero.png';
+hero.src = phone.id === 'phone-brexit' ? 'hero-brexit.png' : 'hero.png';
 
 // Add form handlers
 
