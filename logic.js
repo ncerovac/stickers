@@ -88,30 +88,42 @@ form.onsubmit = handleFormSubmit;
 
 form.attributes['onSubmit'] = null;
 } catch (e) {}
+
 // Add subscribe form handlers
 
+try {
 var subscribeForm = document.getElementById('subscribe-form'),
     subscribeEmailInput = subscribeForm.querySelector('input[name="email"]'),
     subscribeButton = subscribeForm.querySelector('button[type="submit"]');
 
+
 function handleSubscribeFormSubmit(e) {
   e.preventDefault();
 
-  alert('ok');
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://docs.google.com/forms/d/11tF-3R_Lq6Ps4aohPKgqaMKXj0uQCaqi2CFnyeE45wc/formResponse');
+
+  xhr.onreadystatechange = function(e) {
+    if (this.readyState == 4) {
+      document.getElementById('subscribe').style.display = 'none';
+      document.getElementById('subscribe-success').style.display = 'block';
+      //event triger submit for GA
+      ga('send', 'event', 'Button', 'submit', 'Request Brexit Stickers');
+      //mixpanel track req and person
+      mixpanel.track("Send Me Brexit Stickers Button", {"Email" : subscribeEmailInput.value});
+      mixpanel.people.set({
+        "$email": subscribeEmailInput.value // only special properties need the $
+      });
+    }
+  };
+
+  xhr.send('entry.1993749993=' + subscribeEmailInput.value);
 }
 
 subscribeForm.onsubmit = handleSubscribeFormSubmit;
 
 subscribeForm.attributes['onSubmit'] = null;
 
+} catch (e) {}
 // Initialize start button
 
-document.getElementById('start').onclick = function () {
-  //send event triger to FB
-  fbq('track', 'Lead');
-  //send event triger to GA
-  ga('send', 'event', 'Button', 'lead', 'Request Info');
-  //send triggere to mixpannel
-  mixpanel.track("Get In Touch Button", {"Button Location": "Top"});
-  document.getElementById('order').scrollIntoView();
-}
