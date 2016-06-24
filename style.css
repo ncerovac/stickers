@@ -82,6 +82,15 @@ body {
   width: 33.3332%;
   vertical-align: top;
 }
+.row2 {
+  display: table-row;
+  width: 100%;
+}
+.row2 > div {
+  display: table-cell;
+  width: 50%;
+  vertical-align: top;
+}
 .row3.centered > div {
   vertical-align: middle;
 }
@@ -336,6 +345,13 @@ button:active {
     display: block;
     width: 100%;
     margin-top: 3rem;
+  }
+  .row2 {
+    display: block;
+  }
+  .row2 > div {
+    display: block;
+    width: 100%;
   }
   .row3 {
     display: block;
