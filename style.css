@@ -4,14 +4,6 @@ body {
   font-size: 17px;
   overflow-x: hidden;
 }
-.social span {
-  display: inline-block;
-  width: 110px;
-}
-
-.social iframe {
-  vertical-align: bottom;
-}
 #hero {
   padding: 1rem 0 0 0;
   background: rgba(237,237,237,1);
