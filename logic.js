@@ -54,6 +54,7 @@ function handleFormSubmit(e) {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById('order').style.display = 'none';
       document.getElementById('order-success').style.display = 'block';
+      fbq('track', 'CompleteRegistration');
     }
   };
 
@@ -81,5 +82,6 @@ form.attributes['onSubmit'] = null;
 // Initialize start button
 
 document.getElementById('start').onclick = function () {
+  fbq('track', 'Lead');
   document.getElementById('order').scrollIntoView();
 }
