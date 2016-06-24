@@ -4,6 +4,9 @@ body {
   font-size: 17px;
   overflow-x: hidden;
 }
+.social iframe,.social>span {
+vertical-align: middle;
+}
 #hero {
   padding: 1rem 0 0 0;
   background: rgba(237,237,237,1);
