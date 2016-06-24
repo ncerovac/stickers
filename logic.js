@@ -55,6 +55,14 @@ function handleFormSubmit(e) {
       document.getElementById('order').style.display = 'none';
       document.getElementById('order-success').style.display = 'block';
       fbq('track', 'CompleteRegistration');
+      //event triger submit for GA
+      ga('send', 'event', 'Button', 'submit', 'Request Sticker');
+      //mixpanel track req and person
+      mixpanel.track("Request Sticker", {"Name": nameInput.value, "Email" : emailInput.value, "Package" : form.querySelector('input[name="package"]:checked').value});
+      mixpanel.people.set({
+        "$email": emailInput.value, // only special properties need the $
+        "name": nameInput.value
+      });
     }
   };
 
@@ -82,6 +90,11 @@ form.attributes['onSubmit'] = null;
 // Initialize start button
 
 document.getElementById('start').onclick = function () {
+  //send event triger to FB
   fbq('track', 'Lead');
+  //send event triger to GA
+  ga('send', 'event', 'Button', 'lead', 'Request Info');
+  //send triggere to mixpannel
+  mixpanel.track("Request Info", {"Button Location": "Top"});
   document.getElementById('order').scrollIntoView();
 }
