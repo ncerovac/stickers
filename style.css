@@ -329,7 +329,16 @@ button:active {
 .vote-table {
   padding: 0 4rem 0 4rem;
 }
-@media (max-width: 40rem) {
+@media (max-width: 70rem) {
+  .row2.large {
+    display: block;
+  }
+  .row2.large > div {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 70rem) {
   .vote-table {
     padding: 0;
   }

@@ -96,15 +96,14 @@ var subscribeForm = document.getElementById('subscribe-form'),
     subscribeEmailInput = subscribeForm.querySelector('input[name="email"]'),
     subscribeButton = subscribeForm.querySelector('button[type="submit"]');
 
-
 function handleSubscribeFormSubmit(e) {
   e.preventDefault();
 
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://docs.google.com/forms/d/11tF-3R_Lq6Ps4aohPKgqaMKXj0uQCaqi2CFnyeE45wc/formResponse');
+  xhr.open('POST', 'https://hooks.zapier.com/hooks/catch/1445143/446uuc/');
 
   xhr.onreadystatechange = function(e) {
-    if (this.readyState == 4) {
+    if (this.readyState == 4 && this.status == 200) {
       document.getElementById('subscribe').style.display = 'none';
       document.getElementById('subscribe-success').style.display = 'block';
       //event triger submit for GA
@@ -117,7 +116,11 @@ function handleSubscribeFormSubmit(e) {
     }
   };
 
-  xhr.send('entry.1993749993=' + subscribeEmailInput.value);
+  var content = JSON.stringify({
+    email: subscribeEmailInput.value
+  });
+
+  xhr.send(content);
 }
 
 subscribeForm.onsubmit = handleSubscribeFormSubmit;
@@ -126,4 +129,17 @@ subscribeForm.attributes['onSubmit'] = null;
 
 } catch (e) {}
 // Initialize start button
+
+document.getElementById('start').onclick = function () {
+  //send event triger to FB
+  fbq('track', 'Lead');
+  //send event triger to GA
+  ga('send', 'event', 'Button', 'lead', 'Request Info');
+  //send triggere to mixpannel
+  mixpanel.track("Get In Touch Button", {"Button Location": "Top"});
+  var order = document.getElementById('order'),
+      subscribe = document.getElementById('subscribe');
+
+  (order || subscribe).scrollIntoView();
+}
 
