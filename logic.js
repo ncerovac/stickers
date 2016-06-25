@@ -140,26 +140,57 @@ document.getElementById('start').onclick = function () {
   //send triggere to mixpannel
   mixpanel.track("Get In Touch Button", {"Button Location": "Top"});
   var order = document.getElementById('order'),
-      subscribe = document.getElementById('more-stickers');
+      how = document.getElementById('how-heading');
 
-  (order || subscribe).scrollIntoView();
+  (order || how).scrollIntoView();
 }
 
-document.getElementById('dwnl-telegram').onclick = function () {
+try {
+  var dwnl = document.getElementById('dwnl-telegram'),
+      prevOnclick = dwnl.onclick;
+dwnl.onclick = function () {
   //send event triger to FB
   fbq('track', 'AddToCart');
   //send event triger to GA
   ga('send', 'event', 'Button', 'download', 'Download Telegram');
   //send triggere to mixpannel
   mixpanel.track("Download Telegram Stickers");
-}
 
-document.getElementById('cust-sticker-btn').onclick = function () {
+  prevOnclick.apply(this, arguments);
+}
+} catch(e) {}
+
+try {
+  var btn = document.getElementById('dwnl-telegram'),
+      prevOnclick = btn.onclick;
+btn.onclick = function () {
   //send event triger to GA
   ga('send', 'event', 'Button', 'lead', 'From Brexit to Custom Stickers');
   //send triggere to mixpannel
   mixpanel.track("From Brexit To Custom Stickers");
-}
 
+  prevOnclick.apply(this, arguments);
+}
+} catch(e) {}
+
+try {
+document.getElementById('ppuk').onsubmit = function (e) {
+  //send event triger to FB
+  fbq('track', 'InitiateCheckout');
+  //send event triger to GA
+  ga('send', 'event', 'Button', 'Donate', 'Donate Click');
+  //send triggere to mixpannel
+  mixpanel.track("Donate Button Click", {Currency: 'GBP'});
+};
+
+document.getElementById('ppeu').onsubmit = function (e) {
+  //send event triger to FB
+  fbq('track', 'InitiateCheckout');
+  //send event triger to GA
+  ga('send', 'event', 'Button', 'Donate', 'Donate Click');
+  //send triggere to mixpannel
+  mixpanel.track("Donate Button Click", {Currency: 'EUR'});
+};
+} catch(e) {}
 
 

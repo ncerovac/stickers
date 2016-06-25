@@ -143,19 +143,19 @@
                 <img src="nickfarage.png" style="width: 120px; margin: 1rem;" />
               </div>
               <div class="entry" style="margin: 2rem auto;">
-                <a id="dwnl-telegram" target="_blank" style="text-decoration:none; text-align:center; color: white; font-size: 21px;" class="button-custom" href="https://telegram.me/addstickers/BrexitByStickerWin" role="button">Add To Telegram <i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+                <button id="dwnl-telegram" onclick="location.href = 'https://telegram.me/addstickers/BrexitByStickerWin';">Add To Telegram<i class="fa fa-paper-plane-o" aria-hidden="true" style="margin-left: 0.5rem"></i></button>
               </div>
             </div>
           </section>
         </div>
         <div>
           <section id="vote" style="text-align: center;padding: 0 1rem;margin: 3rem 0 0 0;">
-            <h2 style="margin-bottom: 2rem;">Want more Brexit personalities?</h2>
+            <h2 style="margin-bottom: 2rem;">Want More Brexit Stickers?</h2>
             <div style="margin: 2rem 1rem">
               <p>Donate and tell us who you'd like to see added to the list!<p>
             </div>
             <div>
-              <small><i>On PayPal don't forget to add person you would like to see next in collection</i></small>
+              <small><i>Don’t forget to add the person you would like to see next on PayPal. See the image below.</i></small>
               <img src="vote-person.png" style="max-width: 60%;" />
             </div>
             <div class="vote-table" style="display: table; width: 100%;">
@@ -165,7 +165,7 @@
                 <div>
                   <div style="margin: 2rem 1rem">
                     <img src="uk.png" style="width: 100px;" />
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <form id="ppuk" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="UDLGELRSRNRZW">
                     <table style="margin: 1rem auto;">
@@ -186,7 +186,7 @@
                 <div>
                   <div style="margin: 2rem 1rem">
                     <img src="eu.png" style="width: 94.75px;" />
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <form id="ppeu" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="3EQNVRMYNZFUA">
                     <table style="margin: 1rem auto;">
@@ -241,10 +241,10 @@
 
     <section id="custom-stickers">
       <div class="entry" style="margin-bottom: 0;">
-        <h2 style="margin-bottom: 0; margin-top: 2rem;">Want custom personalized stickers for every occasion. Starring you, your friends and coworkers in their signature pose?</h2>
-        <p style="text-align:center;"><i>*Easily printable on shirts, mugs, posters and more!</i></p>
+        <h2 style="margin-bottom: 2rem; margin-top: 2rem;">Want custom personalized stickers for every occasion? Starring you, your friends and coworkers in their signature pose?</h2>
+        <p style="text-align:center;"><i>Easily printable on shirts, mugs, posters and more!</i></p>
         <div class="entry" style="margin: 2rem auto; text-align:center;">
-          <a class="button-custom" style="text-decoration: none, text-align:center; color: white; font-size: 21px;" href="http://sticker.win" role="button">We Got You Covered!</a>
+          <button id="cust-sticker-btn" onclick="location.href = '/';">We’ve Got You Covered!</button>
         </div>
         
       </div>
