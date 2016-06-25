@@ -92,7 +92,7 @@ form.attributes['onSubmit'] = null;
 // Add subscribe form handlers
 
 try {
-var subscribeForm = document.getElementById('subscribe-form'),
+var subscribeForm = document.getElemen  tById('subscribe-form'),
     subscribeEmailInput = subscribeForm.querySelector('input[name="email"]'),
     subscribeButton = subscribeForm.querySelector('button[type="submit"]');
 
@@ -142,4 +142,22 @@ document.getElementById('start').onclick = function () {
 
   (order || subscribe).scrollIntoView();
 }
+
+document.getElementById('dwnl-telegram').onclick = function () {
+  //send event triger to FB
+  fbq('track', 'AddToCart');
+  //send event triger to GA
+  ga('send', 'event', 'Button', 'download', 'Download Telegram');
+  //send triggere to mixpannel
+  mixpanel.track("Download Telegram Stickers");
+}
+
+document.getElementById('cust-sticker-btn').onclick = function () {
+  //send event triger to GA
+  ga('send', 'event', 'Button', 'lead', 'From Brexit to Custom Stickers');
+  //send triggere to mixpannel
+  mixpanel.track("From Brexit To Custom Stickers");
+}
+
+
 
