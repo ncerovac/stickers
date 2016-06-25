@@ -140,7 +140,7 @@ document.getElementById('start').onclick = function () {
   //send triggere to mixpannel
   mixpanel.track("Get In Touch Button", {"Button Location": "Top"});
   var order = document.getElementById('order'),
-      subscribe = document.getElementById('subscribe');
+      subscribe = document.getElementById('more-stickers');
 
   (order || subscribe).scrollIntoView();
 }

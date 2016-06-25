@@ -289,7 +289,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1f585', end
 #copy > .lead3 {
   margin: 0 0 1rem 0;
 }
-button {
+button, .button-custom {
   color: white;
   font-size: 21px;
   border-radius: 0.25rem;
@@ -308,7 +308,9 @@ button {
   transition: all 300ms ease-in-out;
 }
 button:focus,
-button:hover {
+button:hover,
+.button-custom:focus,
+.button-custom:hover {
   background: rgba(45,141,214,1);
   background: -moz-linear-gradient(45deg, rgba(45,141,214,1) 0%, rgba(138,185,222,1) 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(45,141,214,1)), color-stop(100%, rgba(138,185,222,1)));
@@ -318,7 +320,8 @@ button:hover {
   background: linear-gradient(45deg, rgba(45,141,214,1) 0%, rgba(138,185,222,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d8dd6', endColorstr='#8ab9de', GradientType=1 );
 }
-button:active {
+button:active.
+.button-custom:active {
   background: rgba(41,131,204,1);
   background: -moz-linear-gradient(45deg, rgba(41,131,204,1) 0%, rgba(131,176,212,1) 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(41,131,204,1)), color-stop(100%, rgba(131,176,212,1)));
