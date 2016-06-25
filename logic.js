@@ -106,6 +106,8 @@ function handleSubscribeFormSubmit(e) {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById('subscribe').style.display = 'none';
       document.getElementById('subscribe-success').style.display = 'block';
+      //facebook triger complete reg
+      fbq('track', 'CompleteRegistration');
       //event triger submit for GA
       ga('send', 'event', 'Button', 'submit', 'Request Brexit Stickers');
       //mixpanel track req and person
