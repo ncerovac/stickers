@@ -92,7 +92,7 @@ form.attributes['onSubmit'] = null;
 // Add subscribe form handlers
 
 try {
-var subscribeForm = document.getElemen  tById('subscribe-form'),
+var subscribeForm = document.getElementById('subscribe-form'),
     subscribeEmailInput = subscribeForm.querySelector('input[name="email"]'),
     subscribeButton = subscribeForm.querySelector('button[type="submit"]');
 
